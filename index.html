@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mapa Interactivo Bosa</title>
+</head>
+<body>
+
+  
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Mapa Interactivo</a></li>
+      <li><a href="Seccion_Audiovisual.html">Seccion audiovisual</a></li>
+      <li><a href="Seccion_Informativa.html">Seccion informativa</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<main>
+
+
+<div class="Seccion_Mapa_Interactivo_Bosa">
+
+    <div class="Titulo">
+
+        <h1>Mapa Interactivo Bosa</h1>
+
+    </div>
+
+      <!-- Panel de información para mostrar detalles del lugar seleccionado -->
+   <div id="panelInfo">
+
+      <img id="imagenLugar" src="" alt="Lugar">
+
+       <h2 id="tituloLugar">Selecciona un punto</h2>
+
+         <p id="direccion"></p>
+
+
+       <a id="btnMaps" target="_blank">
+       Ver en Google Maps
+       </a>
+
+       <p id="categoriaLugar"></p>
+
+       <p id="descripcionLugar">
+         Haz clic en un punto del mapa para explorar
+        </p>
+
+         <p id="importanciaLugar"></p>
+   </div>
+
+
+
+
+  <div id="leyenda">
+
+   <div class="Leyenda-Texto">
+     <h3>Haz clic en una categoría para filtrar los puntos del mapa</h3>
+   </div>
+
+   <div class="categoria" data-color="amarillo">
+     🟡 Historia e identidad
+   </div>
+
+   <div class="categoria" data-color="verde">
+     🟢 Territorio y ambiente
+   </div>
+
+   <div class="categoria" data-color="azul">
+     🔵 Instituciones y servicios
+   </div>
+
+   <div class="categoria" data-color="morado">
+     🟣 Participación comunitaria
+   </div>
+
+   <div class="categoria" data-color="cafe">
+     🟤 Todas
+   </div>
+
+  
+
+
+
+    <!-- Botón volver al mapa -->
+   <button id="btnVolver" class="oculto">
+    Volver al mapa
+   </button>
+
+   <script type="module" src="./main.js"></script>
+
+ </div>
+
+</div>
+
+
+</main>
+
+
+  
+</body>
+</html>

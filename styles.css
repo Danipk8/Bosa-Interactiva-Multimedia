@@ -1,0 +1,737 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+background: radial-gradient(circle at top, #00162d, #000);
+}
+
+
+
+/* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(255,255,255,0.08);
+}
+
+/* NAV */
+nav {
+    max-width: 1400px;
+    margin: auto;
+    padding: 15px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    display: block;
+}
+
+nav ul li a:hover {
+    transform: translateY(-2px);
+}
+
+/* Colores por sección */
+nav ul li a[href="index.html"] {
+    border: 2px solid #00eeff;
+    box-shadow: inset 0 0 10px #00eeff;
+}
+
+nav ul li a[href="Seccion_Audiovisual.html"] {
+    border: 2px solid #7700ff;
+    box-shadow: inset 0 0 10px #7700ff;
+}
+
+nav ul li a[href="Seccion_Informativa.html"] {
+    border: 2px solid #e100ff;
+    box-shadow: inset 0 0 10px #e100ff;
+}
+
+
+
+main {
+    padding-top: 0px;
+    position: relative;
+}
+
+
+
+.Seccion_Mapa_Interactivo_Bosa {
+    position: relative;
+    width: 100%;
+    background: radial-gradient(circle at top, #120022, #000);
+}
+
+
+.Seccion_Mapa_Interactivo_Bosa .Titulo {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    font-size: 30px;
+    color: white;
+    text-shadow:
+    0 0 8px #fff,
+    0 0 25px #00aeff,
+    0 0 60px #00b7ff;
+}
+
+
+
+p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+#panelInfo{
+    position: fixed;
+  top: 108px;
+  right: -520px;
+  width: 466px;
+  height: 683px;
+  padding: 35px;
+  background: rgba(20,20,20,0.94);
+  overflow-y: auto;
+  z-index: 20;
+  transition: right 0.5s ease;
+  backdrop-filter: blur(16px);
+  border-left: 2px solid #00e1ff;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+
+  box-shadow: -15px 0 40px rgba(0,0,0,0.65);
+
+  z-index: 30;
+}
+
+
+
+
+#panelInfo.activo{
+    right: 0;
+}
+
+
+#panelInfo h2{
+    margin-top: 0;
+}
+
+#imagenLugar{
+    width:100%;
+    height:200px;
+
+    object-fit: cover;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    display:none;
+}
+
+#tituloLugar{
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #48d4ff
+}
+
+#descripcionLugar,
+#importanciaLugar,
+#direccion{
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+#categoriaLugar{
+    color:hsl(204, 100%, 85%);
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+
+#btnVolver{
+
+  position: fixed;
+  bottom: -108px;
+  left: 70px;
+  padding: 20px 24px;
+  border: 2px solid #00eeff;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.88);
+  color: white;
+  backdrop-filter: blur(14px);
+  z-index: 35;
+
+    display: none;
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 0 18px rgba(0,238,255,0.35);
+}
+
+#btnVolver:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0,238,255,0.6);
+}
+
+
+
+#leyenda {
+width: 244px;
+  position: fixed;
+  top: 237px;
+  left: 25px;
+  background: rgba(18,18,18,0.88);
+  padding: 31px;
+  color: white;
+  z-index: 20;
+  backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px);
+  border-right: 2px solid #00e1ff;
+
+  box-shadow: -15px 0 40px rgba(0,0,0,0.65);
+
+  z-index: 25;
+
+
+}
+
+#leyenda  :hover {
+transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0, 110, 255, 0.35);
+
+
+}
+
+
+.categoria{
+    margin: 12px 0;
+    padding: 12px 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.04);
+}
+
+
+.categoria:hover{
+
+    transform: scale(1.05);
+
+}
+
+
+
+
+#leyenda h3{
+
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+
+
+
+#btnMaps {
+  display: flex;
+  margin-top: 15px;
+
+  padding: 10px 16px;
+  background: #0086df;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+ align-items: center;
+  justify-content: center;
+
+  
+}
+
+#btnMaps:hover {
+  transform: scale(1.08);
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   SECCION AUDIOVISUAL
+========================= */
+
+
+.Seccion_Audiovisuales_Bosa {
+    min-height: 100vh;
+    padding: 140px 60px 80px;
+    background: radial-gradient(circle at top, #120022, #000);
+}
+
+
+.Titulo-Audiovisual {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+
+.Titulo-Audiovisual h1 {
+    font-size: 55px;
+    color: white;
+
+    text-shadow:
+    0 0 8px #fff,
+    0 0 25px #7700ff,
+    0 0 60px #7700ff;
+}
+
+
+
+
+.Titulo-Audiovisual p {
+    font-size: 22px;
+    color: #d6b8ff;
+}
+
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.video-card {
+    background: rgba(255,255,255,0.04);
+    border: 2px solid rgba(119,0,255,0.35);
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    backdrop-filter: blur(16px);
+
+    box-shadow: 0 0 25px rgba(119,0,255,0.15);
+
+    transition: 0.3s ease;
+}
+
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 35px rgba(119,0,255,0.35);
+}
+
+
+.video-card h3 {
+
+    color: #c28cff;
+    margin-bottom: 15px;
+}
+
+.video-card p {
+    margin-bottom: 20px;
+    color: #f0e7ff;
+}
+
+.video-card iframe {
+  width: 100%;
+    height: 315px;
+
+    border: none;
+
+    border-radius: 16px;
+}
+
+
+.mini-videos {
+    display: flex;
+    gap: 18px;
+}
+
+.mini-videos iframe {
+    width: 50%;
+    height: 260px;
+}
+
+/* Íconos pequeños */
+.video-card h3::before {
+  
+    font-size: 18px;
+    margin-right: 8px;
+    color: #c28cff;
+   
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   SECCION informativa 
+========================= */
+
+
+ .Seccion-Informativa-Bosa {
+
+    min-height: 100vh;
+    padding: 140px 60px 80px;
+    background: radial-gradient(circle at top, #120022, #000);
+ 
+ }  
+
+
+ 
+
+
+
+.Titulo-Seccion-Informativo {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+
+.Titulo-Seccion-Informativa h1 {
+    font-size: 55px;
+    color: white;
+    text-shadow:
+    0 0 8px #fff,
+    0 0 25px #e100ff,
+    0 0 60px #e100ff;
+}
+.Titulo-Seccion-Informativa p {
+   
+font-size: 22px;
+    color: #ffc5fc;
+}
+    
+.info-bosa {
+    padding: 140px 8%;
+    min-height: 100vh;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background: rgba(20,20,20,0.9);
+    border: 2px solid rgba(255, 0, 255, 0.25);
+    border-radius: 18px;
+    padding: 25px;
+    backdrop-filter: blur(12px);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff00aa;
+}
+
+.info-card h3 {
+    color: #ea48ff;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   Responsividad index.html
+========================= */
+
+/* =========================
+   CELULAR
+========================= */
+
+
+@media (max-width: 768px){
+
+.Seccion_Mapa_Interactivo_Bosa .Titulo{
+    top: 190px;
+    font-size: 10px;
+}
+
+#leyenda{
+    width: 65%;
+    left: 45%;
+    transform: translateX(-50%);
+    top: 510px;
+    padding: 16px;
+    max-height: 225px;
+    overflow-y: auto;
+    scale: 90%;
+}
+
+#leyenda h3{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.categoria{
+    font-size: 13px;
+    padding: 8px;
+    margin: 6px 0;
+}
+
+#btnVolver{
+    left: 128px;
+    bottom: 49px;
+    font-size: 13px;
+    z-index: 35;
+}
+
+/* 👇 ESTE ES EL ERROR PRINCIPAL QUE TENÍAS */
+#panelInfo{
+    height: 800px;
+    top: auto;
+    bottom: -100%;
+    right: 0;
+    border-radius: 25px 25px 0 0;
+    border-left: none;
+    border-top: 2px solid #00e1ff;
+    transition: bottom 0.5s ease;
+    scale: 57%;
+    left: 49px;
+    z-index: 30;
+
+
+}
+
+#panelInfo.activo{
+    bottom: 0;
+}
+
+}
+
+
+
+
+/* =========================
+   MÓVILES PEQUEÑOS
+========================= */
+@media (max-width: 480px){
+
+nav ul li{
+    font-size: 12px;
+}
+
+.Seccion_Mapa_Interactivo_Bosa .Titulo{
+top: 191px;
+    font-size: 18px;
+}
+
+#leyenda{
+    width: 229px;
+    top: 548px;
+}
+
+#panelInfo{
+    width: 92%;
+}
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE SECCION AUDIOVISUAL
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .Seccion_Audiovisuales_Bosa {
+    padding: 120px 40px 60px;
+  }
+
+  .Titulo-Audiovisual h1 {
+    font-size: 40px;
+  }
+
+  .Titulo-Audiovisual p {
+    font-size: 18px;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card iframe {
+    height: 280px;
+  }
+
+  .mini-videos {
+    flex-direction: column;
+  }
+
+  .mini-videos iframe {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+  .Seccion_Audiovisuales_Bosa {
+    padding: 150px 20px 50px;
+  }
+
+  .Titulo-Audiovisual h1 {
+    font-size: 28px;
+  }
+
+  .Titulo-Audiovisual p {
+    font-size: 16px;
+  }
+
+  .video-card {
+    padding: 18px;
+  }
+
+  .video-card iframe {
+    height: 220px;
+  }
+
+  .mini-videos iframe {
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE SECCION infromativa
+========================= */
+
+
+
+@media (max-width: 1024px){
+
+.Seccion-Informativa-Bosa {
+    padding: 120px 40px 60px;
+}
+
+.Titulo-Seccion-Informativo h1 {
+    font-size: 40px;
+}
+
+.Titulo-Seccion-Informativo p {
+    font-size: 18px;
+}
+
+.info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    padding: 20px;
+}
+
+.info-card h3 {
+    font-size: 20px;
+}
+}
+
+
+@media (max-width: 600px){
+
+.Seccion-Informativa-Bosa {
+    padding: 310px 20px 50px;
+}
+
+.Titulo-Seccion-Informativo h1 {
+    font-size: 28px;
+}
+
+.Titulo-Seccion-Informativo p {
+    font-size: 16px;
+}
+
+/* convierte todo en 1 columna */
+.info-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.info-card {
+    padding: 18px;
+}
+
+.info-card h3 {
+    font-size: 18px;
+}
+}
