@@ -1,4 +1,95 @@
 
+
+/* =========================
+   INTRO / PUERTAS
+========================= */
+
+#intro{
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #000, #050014);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* texto encima */
+.intro-contenido{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.intro-contenido h1{
+  font-size: 50px;
+  text-shadow: 0 0 20px #00e1ff;
+}
+
+.intro-contenido p{
+  font-size: 18px;
+  color: #bdefff;
+  margin-bottom: 20px;
+}
+
+/* botón */
+#entrar{
+  padding: 14px 28px;
+  font-size: 18px;
+  border: 2px solid #00e1ff;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#entrar:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00e1ff;
+}
+
+/* puertas */
+.puerta{
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to bottom, #0a0a0a, #111827);
+  transition: 1.2s ease;
+  z-index: 1;
+}
+
+.izquierda{
+  left: 0;
+  border-right: 1px solid #00e1ff33;
+}
+
+.derecha{
+  right: 0;
+  border-left: 1px solid #00e1ff33;
+}
+
+/* estado abierto */
+#intro.abrir .izquierda{
+  transform: translateX(-100%);
+}
+
+#intro.abrir .derecha{
+  transform: translateX(100%);
+}
+
+
+
+
+
+
+
+/*Index*/ 
+
+
 html, body {
     margin: 0;
     padding: 0;
