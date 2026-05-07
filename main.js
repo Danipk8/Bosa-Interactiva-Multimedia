@@ -1,6 +1,30 @@
 //Comprobar si todo funciona correctamente
 console.log('Funciona_');
 
+
+
+
+
+//Fubcion para abrir puertas de intro
+document.getElementById("entrar").addEventListener("click", () => {
+  
+  const intro = document.getElementById("intro");
+
+  intro.classList.add("abrir");
+
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 1200);
+
+});
+
+
+
+
+
+
+
+
 //Importar la biblioteca de Three.js
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 
